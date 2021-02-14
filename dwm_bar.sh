@@ -61,7 +61,7 @@ do
     # Append results of each func one by one to a string
     dispstr=""
 #    dispstr="$dispstr$(dwm_connman)"
- #   dispstr="$dispstr$(dwm_countdown)"
+#    dispstr="$dispstr$(dwm_countdown)"
 #    dispstr="$dispstr$(dwm_alarm)"
 #    dispstr="$dispstr$(dwm_transmission)"
 #    dispstr="$dispstr$(dwm_cmus)"

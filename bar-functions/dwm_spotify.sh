@@ -16,12 +16,12 @@ dwm_spotify () {
     fi
 
     if [ "$PLAYER" = "spotify" ] || [ "$PLAYER" = "spotifyd" ]; then
-        ARTIST=$(playerctl metadata artist)
-        TRACK=$(playerctl metadata title)
-        POSITION=$(playerctl position | sed 's/..\{6\}$//')
-        DURATION=$(playerctl metadata mpris:length | sed 's/.\{6\}$//')
-        STATUS=$(playerctl status)
-        SHUFFLE=$(playerctl shuffle)
+        ARTIST=$(playerctl --player=mpv,spotify metadata artist)
+        TRACK=$(playerctl --player=mpv,spotify metadata title)
+        POSITION=$(playerctl --player=mpv,spotify position | sed 's/..\{6\}$//')
+        DURATION=$(playerctl --player=mpv,spotify metadata mpris:length | sed 's/.\{6\}$//')
+        STATUS=$(playerctl --player=mpv,spotify status)
+        SHUFFLE=$(playerctl --player=mpv,spotify shuffle)
 
         if [ "$IDENTIFIER" = "unicode" ]; then
             if [ "$STATUS" = "Playing" ]; then
